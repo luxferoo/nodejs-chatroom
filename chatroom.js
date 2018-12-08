@@ -43,7 +43,13 @@ server.on("connection", socket => {
     });
     //socket.setEncoding("utf8")
 });
+
+
 const port = 9000;
 server.listen(port, () => {
-    console.log("Server started at port "+port)
+    console.log("Server started at port " + port)
+});
+
+server.on("error", err => {
+    console.log(err)
 });
